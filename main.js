@@ -103,7 +103,7 @@ class Programmer extends Person {
   }
   // 6. Give the Programmer an 'offerNewTask' method that console logs one thing if the programmer is busy and another if the programmer is not, e.g. should initially log out "Mark can't accept any new tasks right now." and "Mark would love to take on a new responsibility." if the programmer is not busy.
   offerNewTask() {
-    if (this.busy) {
+    if (this.busy === true) {
       console.log(`${this.name} is currently busy and not accepting new tasks.`);
     }
       else {
@@ -141,3 +141,8 @@ programmer2.listLanguage();
 person1.Info();
 programmer1.Info();
 programmer2.Info();
+
+programmer1.completeTask();
+programmer1.offerNewTask();
+programmer1.acceptNewTask();
+programmer1.offerNewTask();
